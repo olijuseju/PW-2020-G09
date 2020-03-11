@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GTI | Monitorización de campos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Trabajaremos con el ancho del dispositivo y escala 1, necesario para los navegadores viejos-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--Para que sea compatible con internet explorer version edge-->
+    <link rel="stylesheet" type="text/css" href="app/css/login.css" media="screen">
+    <link rel=”shortcut icon” type=”image/svg” src="images/logoGTI.svg">
+    <script src="app/js/algo.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="encabezado">
+    <div class="logo-menu">
+        <!--El logo es un enlace al home-->
+        <a href="index.html">
+            <img src="app/images/logoGTI.svg" alt="Logo de la empresa" class="imagen-encabezado">
+        </a>
+
+        <div class="menu-desktop">
+            <li class="active"><!--La class active servirá para diseñar la clase, Cada elemento de la lista se pone con un li-->
+                <a href="index.html">Inicio</a><!--Cada elemento de la lista es un enlace, cuando pulse inicio irá a index.html-->
+            </li>
+            <li><a href="#quienesSomos.html">Quienes Somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </div>
+    </div>
+    <div class="header-buttons">
+<!--        <img src="app/images/esp.svg" alt="Idioma" class="idioma">-->
+        <a href="index.html"><button class="boton-inicioSesion">Volver</button></a>
+    </div>
+    <div class="pack-menu">
+        <img src="app/images/menu.svg" class="img-menu" onClick="showMenu()">
+        <div id="menu-principal" style="visibility:hidden">
+            <ul><!--id es una class pero única-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</header><!--Cabezera con logo, buscador y menú-->
+
+      
+    
+	<section class="inicioSesion">
+	    <img src="app/images/fondo-login.jpg" alt="Fondo login" class="imagen-inicioSesion">
+		<div class="div-inicioSesion">
+                <h2 class="tituloLogin">Inicia Sesión</h2>
+                <form action="post" id="form-inicioSesion" method="post" autocomplete="off" onsubmit="enviar(event)">
+                	<div id="campo-email">
+                        <!--Esto es la casilla de usuario-->
+                        <input name="email" type="text" id="email" placeholder="Correo..." autofocus="" required>
+                    </div>
+                    <div id="campo-pass">
+                        <!--Esta es la de la contraseña-->
+ 					    <input name="password" type="password" id="password" placeholder="Clave..." required>
+                    </div>
+ 					<!--El botón de acceder-->
+                    <input type="submit" id="submit" name="submit" value="Accede" class="boton-acceder">
+                    <div id="error-inicioSesion">
+
+                    </div>
+                </form>
+                <div>
+                    <h4>¿No eres cliente? Contrátanos!</h4>
+                    <a href="contacto.html" class="boton-contacta">Contacte con nosotros</a>
+                </div>
+        </div>
+	</section>
+
+<footer class="piedepagina" role="contentinfo">
+    <div class="contenido1-piedepagina">
+        <p class="copicorreo">&copy;2020 GTI todos los derechos reservados</p>
+    </div>
+
+    <div class="contenido2-piedepagina">
+        <p class="copicorreo">Correo electrónico: correo@ejemplo.es</p>
+        </div>
+    </footer>
+
+    <script>
+        function enviar(evento) {
+            evento.preventDefault();
+            fetch('api/v1.0/sesion', {
+                method : 'post',
+                body : new FormData(document.getElementById('form-inicioSesion'))
+            }).then(function (respuesta) {
+                if (respuesta.status == 200){
+                    location.href = 'app/usuario-logeado.php';
+                }else{
+                    let campo_pass=document.getElementById("error-inicioSesion");
+                    campo_pass.innerHTML='<p>Email y/o contraseña incorrecto(s)</p>';
+                }
+            })
+        }
+    </script>
+
+    </body>
+</html>
+
+

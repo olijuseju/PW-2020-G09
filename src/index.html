@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GTI | Monitorización de campos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Trabajaremos con el ancho del dispositivo y escala 1, necesario para los navegadores viejos-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--Para que sea compatible con internet explorer version edge-->
+    <link rel="stylesheet" type="text/css" href="app/css/style.css" media="screen">
+    <link rel=”shortcut icon” type=”image/svg” src="app/images/logoGTI.svg">
+    <script src="app/js/algo.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado">
+    <div class="logo-menu">
+        <!--El logo es un enlace al home-->
+        <a href="index.html">
+            <img src="app/images/logoGTI.svg" alt="Logo de la empresa" class="imagen-encabezado">
+        </a>
+
+        <div class="menu-desktop">
+            <li class="active"><!--La class active servirá para diseñar la clase, Cada elemento de la lista se pone con un li-->
+                <a href="index.html">Inicio</a><!--Cada elemento de la lista es un enlace, cuando pulse inicio irá a index.html-->
+            </li>
+            <li><a href="#quienesSomos.html">Quienes Somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </div>
+    </div>
+    <div class="header-buttons">
+<!--        <img src="app/images/esp.svg" alt="Idioma" class="idioma">-->
+        <a href="iniciarSesion.html"><button class="boton-inicioSesion">Inicio sesión</button></a>
+    </div>
+    <div class="pack-menu">
+        <img src="app/images/menu.svg" class="img-menu" onClick="showMenu()">
+        <div id="menu-principal" style="visibility:hidden">
+            <ul><!--id es una class pero única-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</header><!--Cabezera con logo, buscador y menú-->
+      
+    <section class="inicio" role="banner" id="ir_arriba">
+        <img src="app/images/fondo.jpg" alt="Imagen de fondo" class="imagen-fondo">
+        <div class="texto-encabezado">
+              <h1>Monitorice sus campos.</h1>
+              <p>Mantenga controlado su campo con nuestra red de sensores</p>
+        </div>
+        <a href="contacto.html" class="cta">¡CONTACTE CON NOSOTROS!</a>
+        <a href="#ir_abajo"><img src="app/images/flechabajar.svg" class="flecha-bajar" alt="Botón bajar"></a>
+    </section><!--Primera página-Bienvenidos-->
+    
+    <section class="contenido" role="banner" id="ir_abajo">
+        <div class="posicion-contenido">
+            <div class="monitorizacion1">
+                <img src="app/images/monitorizacion2.jpeg" alt="Imagen acceso remoto" class="imagen1-contenido">
+                <span class="texto1-contenido">
+                    <h2>Acceso remoto desde cualquier lugar.</h2>
+                    <p>Con nuestra red de sensores podrá controlar los datos de su campo de la forma más simple y sencilla sin necesidad de estar en el campo ni esperando a que se realicen las mediciones.</p>
+                </span>
+            </div>
+
+            <div class="monitorizacion2">
+               <span class="texto2-contenido">
+                    <h2>Total comodidad en el manejo de datos.</h2>
+                    <p>Gracias a las funciones implementadas podrá ver gráficas de comparación entre distintos datos o entre las mismas mesuras en distintas épocas.</p>
+                </span>
+                <img src="app/images/monitorizacion1.jpg" alt="Imagen comodidad" class="imagen2-contenido">
+            </div>
+
+            <div class="monitorizacion1">
+                <img src="app/images/base-de-datos.jpg" alt="Imagen acceso remoto" class="imagen1-contenido">
+                <span class="texto1-contenido">
+                    <h2>Exportabilidad de datos</h2>
+                    <p>Datos exportables a Excel que facilitan su integración en programas de fertilicación.</p>
+                </span>
+            </div>
+        </div>
+    </section><!--Primera pagina-scroll-->
+    
+<footer class="piedepagina" role="contentinfo">
+    <div class="contenido1-piedepagina">
+        <p>&copy;2020 GTI todos los derechos reservados</p>
+    </div>
+
+    <div class="contenido2-piedepagina">
+        <p class="copicorreo">Correo electrónico: correo@ejemplo.es</p>
+        </div>
+</footer><!--Footer para la info-->
+    </body>
+</html>

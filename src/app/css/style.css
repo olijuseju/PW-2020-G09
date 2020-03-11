@@ -1,0 +1,353 @@
+/*MOBILE*/
+/*----------ESTILOS GENERALES----------*/
+body{
+    margin: 0;
+    font-family: Montserrat;
+    height: 96px;
+}
+h1{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.615686274509804);
+    text-align: center;
+}
+.inicio p{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    color: #434343;
+    text-align: center;
+}
+p{
+    font-family: 'Montserrat';
+}
+/*----------ESTILOS HEADER----------*/
+.encabezado{
+    margin: 0 auto;
+    background-color: #CFB34B;
+    height:80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;/*Capa*/
+    display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+    flex-direction: row;/*Ordenando los ejes*/
+    align-items: center;/*Para alinear los items al medio*/
+    justify-content: space-between;
+}
+.menu-desktop li a{
+    font-family: montserrat;
+    text-decoration-line: none;
+    color: #E1DBD3;
+    font-weight: bold;
+}
+.menu-desktop li a:hover{
+    color: black;
+    transition-duration: 0.6s;
+}
+.logo-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imagen-encabezado{
+    height: 80px;
+}
+.menu-desktop{
+    display:none;
+}
+.menu-desktop li{
+    border-right: 1px solid #E1DBD3;
+    padding-left: 20px;
+    padding-right: 15px;
+    display: inline;
+}
+.idioma{
+    width: 30px;
+    align-items: center;
+}
+.header-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.boton-inicioSesion{
+    font-family: montserrat;
+    margin-right: 20px;
+    margin-left: 20px;
+    background: #CFB34B;
+    border: 2px solid #E1DBD3;
+    padding: 8px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-top: 6px;
+    color: black;
+}
+.boton-inicioSesion:hover{
+    border: 2px solid black;
+    transition-duration: 0.6s;
+    background-color: #E1DBD3;
+}
+.pack-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img-menu{
+    background-repeat:no-repeat;/*Para que no se repita la imagen*/
+    height:50px;
+    width:50px;
+    background-position:center;/*Posicion de la imagen*/
+}
+/*----------ESTILOS LANDING PAGE----------*/
+.inicio{
+    position: relative;
+    text-align: center;
+    height: 667px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.imagen-fondo{
+    width: 100%;
+    height: 100%;
+    /*max-height: 100vh;*//*La funcion calc calcula el 100% del tamaño reservado de la pagina menos los 100px de la cabezera*/
+}
+.texto-encabezado{
+    position: absolute;
+    top: 9%;
+    /*Centrar a tope*/
+    left: 50%;
+    transform: translateX(-50%);/*Centra al 50%*/
+}
+.cta{
+        border-radius: 20px;
+        position: absolute;
+        background-color: #E1DBD3; 
+        color: black; 
+        border: 3px solid #DAB707;
+        padding: 3% 7%; 
+        bottom: 25%;
+        text-align: center;
+        font-weight: 600;
+        font-style: 36px;
+        font-size: 18px;
+        font-family: montserrat;
+        margin: 0px 70px;
+        transition-duration: 0.7s;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .cta:hover {
+        border-radius: 20px;
+        border-color: #DAB707;
+        background-color: black;
+        color: #DAB707;
+    }
+.flecha-bajar{
+    position: absolute;
+    bottom: 10px;
+    height: 25px;
+    left: 50%;
+    transform: translateX(-50%);/*Centra al 50%*/
+    margin: auto;
+    
+}
+/*----------ESTILOS SCROLL LANDING----------*/
+.posicion-contenido{
+    background-color: #E1DBD3;
+    padding-top: 80px; 
+}
+.contenido{
+    background-color: #E1DBD3;
+    display: flex;
+    flex-direction: column;
+}
+.monitorizacion1{
+    width: 100%;
+    height: 100%;
+    display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+    flex-direction: column;/*Ordenando los ejes*/
+}
+.imagen1-contenido{
+    width: 100%;
+    height: 15%;
+}
+.texto1-contenido{
+    width: 100%;
+}
+.monitorizacion2{
+    height: 100%;
+    width: 100%;
+    display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+    flex-direction: column-reverse;/*Ordenando los ejes*/
+}
+.div-imagen2-contenido{
+    width: 80%;
+    height: 15%;
+}
+.imagen2-contenido{
+    width: 100%;
+    height: 20%;
+}
+/*----------ESTILOS FOOTER----------*/
+.piedepagina{
+    background-color: #CFB34B;
+    display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+    flex-direction: row;/*Ordenando los ejes*/
+    height: 100%;
+}
+.contenido1-piedepagina{
+    display: flex;
+    flex-direction: row;/*Ordenando los ejes*/
+    align-items: center;/*Para alinear los items al medio*/
+    justify-content: space-between;
+    width: 100%;
+}
+.contenido1-piedepagina p{
+    margin-left: 40px;
+    border-right: 1px solid #E1DBD3; 
+}
+.contenido2-piedepagina{
+    display: flex;
+    flex-direction: row;/*Ordenando los ejes*/
+    align-items: center;/*Para alinear los items al medio*/
+    justify-content: flex-end;
+    width: 100%;
+}
+.copicorreo{
+    margin-left: 5px;
+}
+/*DESKTOP*/
+@media (min-width: 520px) {/*Oculta el menu de movil para resoluciones mayores a 750*/
+    .pack-menu{
+        display: none;
+    }
+    .menu-desktop, .idioma{
+        display: inline;
+    }
+
+    .header-buttons{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .idioma{
+        width: 35px;
+        align-items: center;
+        display: inline;
+    }
+    .inicio p{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        color: #434343;
+        text-align: center;
+    }
+    .imagen-fondo{
+        width: 100%;
+        max-height: 100vh;/*La funcion calc calcula el 100% del tamaño reservado de la pagina menos los 100px de la cabezera*/
+    }
+    .contenido1-piedepagina p{
+        border-right: 0;
+    }
+    .contenido2-piedepagina{
+        display: flex;
+        flex-direction: row;/*Ordenando los ejes*/
+        align-items: center;/*Para alinear los items al medio*/
+        justify-content: center;
+        width: 100%;
+    }
+    .cta{
+        background-color: #E1DBD3;
+        padding: 3% 7%;
+        bottom: 25%;
+        right: 30%;
+        left: 30%;
+        border-radius: 50px;
+    /*Texto CTA*/
+    font-family: montserrat;
+        padding: 30px 30px;
+        font-weight: bold;
+        font-weight: 700;
+        font-style: 48px;
+        font-size: 27px;
+        color: #292929;
+    }
+    .flecha-bajar{
+        position: absolute;
+        bottom: 10px;
+        height: 40px;
+        left: 50%;
+        transform: translateX(-50%);/*Centra al 50%*/
+    }
+    .monitorizacion1{
+        height: 100%;
+        display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+        flex-direction: row;/*Ordenando los ejes*/
+        border-bottom: 3px solid #CFB34B;
+    }
+    .monitorizacion2{
+        height: 100%;
+        display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+        flex-direction: row;/*Ordenando los ejes*/
+        border-bottom: 3px solid #CFB34B;
+    }
+    .imagen1-contenido{
+        width: 50%;
+        height: 10%;
+        padding-right: 2.5%;
+        margin: 17px;
+    }
+    .texto1-contenido{
+        width: 50%;
+        margin: auto;
+        margin-right: 2%;
+    }
+    .texto2-contenido{
+        width: 40%;
+        margin: auto;
+    }
+    .texto-piedepagina{
+        margin-left: 4.5%;
+        width: 100%;
+        display: inherit;
+    }
+    .contenido1-piedepagina p{
+        border-right: 0;
+    }
+    .contenido2-piedepagina{
+        display: flex;
+        flex-direction: row;/*Ordenando los ejes*/
+        align-items: center;/*Para alinear los items al medio*/
+        justify-content: center;
+        width: 100%;
+    }
+    .imagen-piedepagina{
+        height: 80px;
+        width: 150px;
+    }
+    .imagen2-contenido{
+        width: 50%;
+        height: 40%;
+        padding-left: 2.5%;
+        margin: 17px;
+    }
+    .inicio{
+        display: flex;
+        justify-content: center;
+        height: 720px;
+    }
+    .texto-encabezado{
+        top: 14%;
+    }
+    .boton-inicioSesion{
+        border-radius: 25px;
+    }
+}

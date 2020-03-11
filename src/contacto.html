@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GTI | Monitorización de campos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Trabajaremos con el ancho del dispositivo y escala 1, necesario para los navegadores viejos-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--Para que sea compatible con internet explorer version edge-->
+    <link rel="stylesheet" type="text/css" href="./app/css/contacto.css" media="screen">
+    <link rel=”shortcut icon” type=”image/svg” src="images/logoGTI.svg">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="app/js/algo.js"></script>
+</head>
+<body>
+<header class="encabezado">
+    <div class="logo-menu">
+        <!--El logo es un enlace al home-->
+        <a href="index.html">
+            <img src="app/images/logoGTI.svg" alt="Logo de la empresa" class="imagen-encabezado">
+        </a>
+
+        <div class="menu-desktop">
+            <li class="active"><!--La class active servirá para diseñar la clase, Cada elemento de la lista se pone con un li-->
+                <a href="index.html">Inicio</a><!--Cada elemento de la lista es un enlace, cuando pulse inicio irá a index.html-->
+            </li>
+            <li><a href="#quienesSomos.html">Quienes Somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </div>
+    </div>
+    <div class="header-buttons">
+<!--        <img src="app/images/esp.svg" alt="Idioma" class="idioma">-->
+        <a href="iniciarSesion.html"><button class="boton-inicioSesion">Inicio sesión</button></a>
+    </div>
+    <div class="pack-menu">
+        <img src="app/images/menu.svg" class="img-menu" onClick="showMenu()">
+        <div id="menu-principal" style="visibility:hidden">
+            <ul><!--id es una class pero única-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</header><!--Cabezera con logo, buscador y menú-->
+
+<section class="contactos" role="banner" id="contactos">
+    <img src="app/images/fondo-contacto.jpg" alt="Imagen de fondo" class="imagen-fondo">
+    <div class="texto-contactos">
+        <h2><!--Titulo, h1 es el más grande y hay hasta h6-->¡Ponte en contacto!</h2>
+        <h3 class="parrcont">Contacto:</h3>
+        <h4 class="parrcont">contacto@gti.es</h4>
+        <h3 class="parrcont">Teléfono</h3>
+        <h4 class="parrcont">669807298</h4>
+        <h3 class="parrcont">Encuéntranos en:</h3>
+        <h4 class="parrcont">C/ Paranimf, 1 </h4>
+        <h4 class="parrcont">46730 Grao de Gandia, Gandia</h4>
+    </div>
+    <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395542.69275817834!2d-0.5335722192601062!3d39.23884699563241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb8ad87b84df4b24!2sUPV%20-%20Escuela%20Polit%C3%A9cnica%20Superior%20de%20Gandia%20EPSG!5e0!3m2!1ses!2ses!4v1583432984096!5m2!1ses!2ses" width="100%" height="100%" frameborder="0" style="border:0;" position="absolute"></iframe>
+    </div>
+</section>
+
+<footer class="piedepagina" role="contentinfo">
+    <div class="contenido1-piedepagina">
+        <p>&copy;2020 GTI todos los derechos reservados</p>
+    </div>
+
+    <div class="contenido2-piedepagina">
+        <p class="copicorreo">Correo electrónico: correo@ejemplo.es</p>
+        </div>
+</footer><!--Footer para la info-->
+</body>
+</html>

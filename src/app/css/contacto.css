@@ -1,0 +1,234 @@
+/*----------ESTILOS GENERALES----------*/
+body{
+    font-family: montserrat;
+    margin: 0 auto;
+}
+h1{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.615686274509804);
+    text-align: center;
+}
+.inicio p{
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #434343;
+    text-align: center;
+}
+/*----------ESTILOS HEADER----------*/
+.encabezado{
+    margin: 0 auto;
+    background-color: #CFB34B;
+    height:80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;/*Capa*/
+    display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+    flex-direction: row;/*Ordenando los ejes*/
+    align-items: center;/*Para alinear los items al medio*/
+    justify-content: space-between;
+}
+.menu-desktop li a{
+    font-family: montserrat;
+    text-decoration-line: none;
+    color: #E1DBD3;
+    font-weight: bold;
+}
+.menu-desktop li a:hover{
+    color: black;
+    transition-duration: 0.6s;
+}
+.logo-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imagen-encabezado{
+    height: 80px;
+}
+.menu-desktop{
+    display:none;
+}
+.menu-desktop li{
+    border-right: 1px solid #E1DBD3;
+    padding-left: 20px;
+    padding-right: 15px;
+    display: inline;
+}
+.idioma{
+    width: 30px;
+    align-items: center;
+}
+.header-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.boton-inicioSesion{
+    font-family: montserrat;
+    margin-right: 20px;
+    margin-left: 20px;
+    background: #CFB34B;
+    border: 2px solid #E1DBD3;
+    padding: 8px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-top: 6px;
+    color: black;
+}
+.boton-inicioSesion:hover{
+    border: 2px solid black;
+    transition-duration: 0.6s;
+    background-color: #E1DBD3;
+}
+.pack-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img-menu{
+    background-repeat:no-repeat;/*Para que no se repita la imagen*/
+    height:50px;
+    width:50px;
+    background-position:center;/*Posicion de la imagen*/
+}
+/*----------CONTACTOS----------*/
+.contactos{
+    width: 100%;
+    height: 675px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.imagen-fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*max-height: 100vh;*//*La funcion calc calcula el 100% del tamaño reservado de la pagina menos los 100px de la cabezera*/
+}
+.texto-contactos{
+    top: 7%;
+    margin: 10%;
+    position: relative;
+}
+.mapa{
+    margin: 7%;
+    position: relative;
+    width: 450px;
+    height: 250px;
+}
+.parrcont{
+    margin: auto;
+}
+.texto-contactos h2{
+    font-size: x-large;
+}
+
+/*----------ESTILOS FOOTER----------*/
+.piedepagina{
+    background-color: #CFB34B;
+    display: flex;/*Activo flex en esta pagina, section es el padre de las cajas 1 y 2*/
+    flex-direction: row;/*Ordenando los ejes*/
+    height: 100%;
+}
+.contenido1-piedepagina{
+    display: flex;
+    flex-direction: row;/*Ordenando los ejes*/
+    align-items: center;/*Para alinear los items al medio*/
+    justify-content: space-between;
+    width: 100%;
+}
+.contenido1-piedepagina p{
+    margin-left: 40px;
+    border-right: 1px solid #E1DBD3; 
+}
+.contenido2-piedepagina{
+    display: flex;
+    flex-direction: row;/*Ordenando los ejes*/
+    align-items: center;/*Para alinear los items al medio*/
+    justify-content: flex-end;
+    width: 100%;
+}
+.copicorreo{
+    margin-left: 5px;
+}
+/*DESKTOP*/
+@media (min-width: 750px) {/*Oculta el menu de movil para resoluciones mayores a 750*/
+    .pack-menu{
+        display: none;
+    }
+    .menu-desktop, .idioma{
+        display: inline;
+    }
+    .texto-contactos{
+        top: 14%;
+        margin: 70px;
+        position: relative;
+    }
+    .mapa{
+        position: relative;
+        margin: 7%;
+    }
+    .pack-menu{
+        display: none;
+    }
+    .menu-desktop, .idioma{
+        display: inline;
+    }
+
+    .header-buttons{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .idioma{
+        width: 35px;
+        align-items: center;
+        display: inline;
+    }
+    .inicio p{
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        color: #434343;
+        text-align: center;
+    }
+    .imagen-fondo{
+        width: 100%;
+        max-height: 100vh;/*La funcion calc calcula el 100% del tamaño reservado de la pagina menos los 100px de la cabezera*/
+    }
+    .contenido1-piedepagina p{
+        border-right: 0;
+    }
+    .contenido2-piedepagina{
+        display: flex;
+        flex-direction: row;/*Ordenando los ejes*/
+        align-items: center;/*Para alinear los items al medio*/
+        justify-content: center;
+        width: 100%;
+    }
+    .mapa{
+        margin: 7%;
+        top: 14%;
+        width: 550px;
+        height: 350px;
+    }
+    .contactos{
+        height: 634px;
+    }
+    body{
+        height: 87px;
+    }
+    .boton-inicioSesion{
+        border-radius: 25px;
+    }
+}
+
+
+
